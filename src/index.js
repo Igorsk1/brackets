@@ -1,5 +1,5 @@
- module.exports = function check(str, bracketsConfig) {
-	let brackets = [];
+module.exports = function check(str, bracketsConfig) {
+  let brackets = [];
 
   for (let i = 0; i < bracketsConfig.length; i++) {
     brackets.push(bracketsConfig[i].join(""));
@@ -10,7 +10,7 @@
       str = str.replace(brackets[i], "");
       i = -1;
     }
-
+  
     if (str === "") return true;
   }
 
